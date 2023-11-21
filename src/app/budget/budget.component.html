@@ -1,0 +1,102 @@
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img
+        class="mx-auto h-10 w-auto" 
+        src="https://imgs.search.brave.com/OZi1IBc7Lnp0alSrfCgNlgGBUSxdJBCzU8FcEGFqjHo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL2dvb2ds/ZS10YXNrczcwNTIu/bG9nb3dpay5jb20u/d2VicA"
+        alt="Your Company"
+      />
+      <h2
+        class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+      >
+        Add Budget
+      </h2>
+    </div>
+    <!-- <div *ngIf="message == true" class="text-2xl font-bold text-green-400 mb-4 text-center">Budget Add SuccessFully</div> -->
+
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <form>
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium leading-6 text-gray-900"
+            >Budget Name</label
+          >
+          <div class="mt-2">
+            <input
+              type="text"
+              name="BudgetName"
+              required
+              [(ngModel)]="BudgetName"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium leading-6 text-gray-900"
+            >Budget Time</label
+          >
+          <div class="mt-2">
+            <input
+              type="time"
+              name="username"
+              required
+              [(ngModel)]="BudgetTime"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium leading-6 text-gray-900"
+            >Budget Amount</label
+          >
+          <div class="mt-2">
+            <input
+              type="text"
+              name="address"
+              required
+              [(ngModel)]="BudgetAmount"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium leading-6 text-gray-900"
+            >Budget Category</label
+          >
+          <div class="mt-2">
+            <input
+              type="email"
+              name="email"
+              required
+              [(ngModel)]="BudgetCategory"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            (click)="addBudget()"
+            class="flex mt-3 w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Add Budget
+          </button>
+        </div>
+      </form>
+
+      <p class="mt-10 text-center text-sm text-gray-500">
+        Already a member?
+        <a
+          routerLink="/login"
+          class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+          >login Here</a>
+      </p>
+    </div>
+  </div>
