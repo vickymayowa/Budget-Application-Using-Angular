@@ -1,3 +1,4 @@
+
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <img class="mx-auto h-10 w-auto" src="https://imgs.search.brave.com/OZi1IBc7Lnp0alSrfCgNlgGBUSxdJBCzU8FcEGFqjHo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL2dvb2ds/ZS10YXNrczcwNTIu/bG9nb3dpay5jb20u/d2VicA" alt="Your Company" />
@@ -37,15 +38,20 @@
     </form>
   </div>
 
+  <div *ngIf="BudgetArray.length === 0" class="text-xl font-bold mb-4 text-center text-gray-900">No budget added yet.</div>
+
   <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-1/4 px-3 mb-6 md:mb-0">
-      <div class="relative flex flex-col min-w-0 break-words bg-white mb-6 shadow-lg rounded-lg bg-gray-1 border-0">
-        <p>Expenses</p>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-1/4 px-3 mb-6 md:mb-0">
+        <div class="relative flex flex-col min-w-0 break-words bg-white mb-6 shadow-lg rounded-lg bg-gray-1 border-0">
+          <p>Expenses</p>
+        </div>
       </div>
-    </div>
 
     <div class="w-1/4 px-3 mb-6 md:mb-0">
-      <p class="relative flex text-center mt-3 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray border-0">Balance</p>
+      <div class="w-1/4 px-3 mb-6 md:mb-0">
+        <p class="relative flex text-center mt-3 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray border-0">Balance</p>
+      </div>
     </div>
   </div>
 
