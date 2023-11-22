@@ -51,4 +51,26 @@ export class BudgetComponent {
     this.BudgetTime = '';
     this.BudgetAmount = '';
   }
+  deleteBudget(budget: BudgetInterface) {
+    const index = this.BudgetArray.findIndex(item => item.id === budget.id);
+    console.log(index)
+    if (index !== -1) {
+      this.BudgetArray.splice(index, 1);
+      localStorage.setItem("BudgetDetails", JSON.stringify(this.BudgetArray));
+    }
+  }
+
+  showEditModal = false;
+  editingBudget: BudgetInterface | null = null;
+
+  editBudget(budget: BudgetInterface) {
+    this.editingBudget = { ...budget };
+    this.showEditModal = true;
+  };
+  saveEdit() {
+    this.showEditModal = false;
+  };
+  cancelEdit() {
+    this.showEditModal = false;
+  };
 }
