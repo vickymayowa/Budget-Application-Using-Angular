@@ -25,7 +25,6 @@ export class BudgetComponent {
   // ...
 
   ngOnInit() {
-    // Load data from localStorage
     alert('Onload of the page is working')
     const localStorageData = localStorage.getItem("BudgetDetails");
 
