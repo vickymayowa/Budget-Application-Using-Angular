@@ -12,7 +12,7 @@ interface BudgetInterface {
 @Component({
   selector: 'app-budget',
   templateUrl: './budget.component.html',
-  styleUrls: ['./budget.component.css']
+  styleUrls: ['./budget.component.css'],
 })
 export class BudgetComponent {
   public BudgetName: string = '';
@@ -25,8 +25,8 @@ export class BudgetComponent {
   // ...
 
   ngOnInit() {
-    alert('Onload of the page is working')
-    const localStorageData = localStorage.getItem("BudgetDetails");
+    alert('Onload of the page is working');
+    const localStorageData = localStorage.getItem('BudgetDetails');
 
     if (localStorageData) {
       this.BudgetArray = JSON.parse(localStorageData) as BudgetInterface[];
@@ -46,17 +46,17 @@ export class BudgetComponent {
       UpdatedAt: this.updated_at,
     };
     this.BudgetArray.push(budgetObject);
-    localStorage.setItem("BudgetDetails", JSON.stringify(this.BudgetArray));
+    localStorage.setItem('BudgetDetails', JSON.stringify(this.BudgetArray));
     this.BudgetName = '';
     this.BudgetTime = '';
     this.BudgetAmount = '';
   }
   deleteBudget(budget: BudgetInterface) {
-    const index = this.BudgetArray.findIndex(item => item.id === budget.id);
-    console.log(index)
+    const index = this.BudgetArray.findIndex((item) => item.id === budget.id);
+    console.log(index);
     if (index !== -1) {
       this.BudgetArray.splice(index, 1);
-      localStorage.setItem("BudgetDetails", JSON.stringify(this.BudgetArray));
+      localStorage.setItem('BudgetDetails', JSON.stringify(this.BudgetArray));
     }
   }
 
@@ -66,11 +66,11 @@ export class BudgetComponent {
   editBudget(budget: BudgetInterface) {
     this.editingBudget = { ...budget };
     this.showEditModal = true;
-  };
+  }
   saveEdit() {
     this.showEditModal = false;
-  };
+  }
   cancelEdit() {
     this.showEditModal = false;
-  };
+  }
 }

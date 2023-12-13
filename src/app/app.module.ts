@@ -9,6 +9,7 @@ import { BudgetComponent } from './budget/budget.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     BudgetComponent,
     ErrorpageComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
