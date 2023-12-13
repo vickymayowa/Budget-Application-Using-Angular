@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { BudgetComponent } from './budget/budget.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RegisterComponent } from './register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
